@@ -7,12 +7,21 @@
 @stop
 
 @section('content')
-    <h3 class="d-flex justify-content-center pb-2">Verse Entries</h3>
-        <div class="container">
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-between" style="background-image: linear-gradient(-90deg, white, grey);">
+        <div class="font-weight-bold" style="font-size: 20px; color: black;"><i class="fas fa-book pr-2"></i>Manage Entries</div>
+
+<button class="btn btn-dark" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus pr-2"></i>New</button>
+</div>
+    </div>
+
+        <div class="container" style="background-image: linear-gradient(-90deg, white, white);">
+
             <div class="row pb-4 d-flex">
-                <button class="btn btn-dark">Add New Verse</button>
+
+                <button class="btn btn-dark mt-4" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus pr-1"></i>Add Verse</button>
                 <div class="pr-3"></div>
-                 <button class="btn btn-success">Add New Name</button>
+                 <button class="btn btn-info mt-4"><i class="fas fa-edit pr-1"></i>Add Name</button>
             </div>
             <div class="row d-flex">
                 
@@ -38,6 +47,8 @@
 </table>
 </div>
 </div>
+{{-- modals --}}
+@include('modals.verse')
 @stop
 
 
